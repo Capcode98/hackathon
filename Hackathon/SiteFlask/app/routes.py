@@ -22,7 +22,13 @@ def error(nome):
 def autenticar():
     usuario = request.form.get('usuario')
     senha = request.form.get('senha')
-    login(usuario, senha)
+    f'Usuario: {usuario} & Senha: {senha}'
+    return login(usuario, senha)
+
+@app.route("/sos")
+@app.route("/sos.html")
+def sos():
+    return f'Página O VÉIO CAIU'
 
 
 if __name__ == "__main__":
@@ -53,5 +59,4 @@ def login(usuario, senha):
     return myresult
 
 result = login('Diego', '123456')
-
-print(result)
+print(result) 
