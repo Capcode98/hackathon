@@ -1,0 +1,2 @@
+FLASK_APP=siteflask.py
+FLASK_ENV=development

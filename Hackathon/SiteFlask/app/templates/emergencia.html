@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style-emergencia.css')}}">
+    <title>MED EXPRESS</title>
+</head>
+<body>
+    <div class="logo">
+        <img src="{{ url_for('static', filename='6.svg')}}" class="esquerdo-login-image" alt="medical-care-animate">
+    </div>
+    
+    <div class="main-login">
+        <div class="esquerdo-login">
+            <h1>Serviço rápido e eficaz!</h1>
+            
+            <h1>Socorro Imediato!</h1>
+
+            <img src="{{ url_for('static', filename='ambulance-animate.svg')}}" class="esquerdo-login-image" alt="medical-care-animate">
+        </div>
+        <div class="direito-login">
+            <div class="card-login">
+                <H1>VOCÊ ESTÁ EM ESTADO DE EMERGÊNCIA?</H1>
+                
+                <label id="label"  for="usuario">Estado do Usuario:</label>
+                <a href="{{ url_for('static', filename='style-emergencia.css')}}"><button  class="btn-login" id="sim" color="red" for="usuario">SIM ESTOU!</button ></a><button class="btn-login" for="usuario">Não Estou!</button>
+            
+                
+            </div>
+        </div>
+    </div>
+</body>
+</html>

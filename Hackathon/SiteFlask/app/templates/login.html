@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style-login.css')}}">
+    <title>LOGIN MED EXPRESS</title>
+</head>
+<body>
+    <div class="logo">
+        <img src="{{ url_for('static', filename='6.svg')}}" class="esquerdo-login-image" alt="medical-care-animate">
+    </div>
+    <div class="main-login">
+        <div class="esquerdo-login">
+            <h1>Conectem-se </h1>
+            
+            <h1>Esteja Sempre Proximo da Assistência Médica de Qualidade!</h1>
+
+            <img src="{{ url_for('static', filename='medical-care-animate.svg')}}" class="esquerdo-login-image" alt="medical-care-animate">
+        </div>
+        <div class="direito-login">
+            <div class="card-login">
+                <H1>LOGIN</H1>
+                <form action="/autenticar" method="post">
+                <div class="campo-de-texto">
+                    <label for="usuario">Usuario:</label>
+                    <input type="text" name="usuario" placeholder="CPF, e-mail, CAD-SUS">
+                </div>
+                <div class="campo-de-texto">
+                    <label for="senha">Senha:</label>
+                    <input type="text" name="senha" placeholder="Senha">
+                </div>
+                <button type="submit" class="btn-login" >Login</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

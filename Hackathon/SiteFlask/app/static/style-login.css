@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sana:wgth@400;700&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+body * {
+    box-sizing: border-box;
+}
+
+.main-login {
+    width: 100%;
+    height: 100vh;
+    background: #74eea3e1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.esquerdo-login {
+    width: 50%;
+    height: 100vh;
+    margin-left: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.esquerdo-login-image {
+    width: 35vw;
+}
+
+.esquerdo-login > h1 {
+    font-size: 32px;
+    color:  rgb(65, 38, 38);
+}
+
+.direito-login {
+    width: 50%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.card-login {
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 30px 35px;
+    background: #4292bf;
+    border-radius: 20px;
+    box-shadow: 0 -10px 40px #bdeef118;
+}
+
+.card-login > form {
+    width: 100%;
+}
+
+.card-login > h1 {
+    color: rgb(226, 224, 224);
+    font-weight: 800;
+    margin: 0;
+}
+
+.campo-de-texto {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 10px;
+}
+
+.campo-de-texto > input{
+
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    padding: 15px;
+    background: #e0e4e78c;
+    color: #f0ffffde;
+    font-size: 12pt;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.campo-de-texto > label {
+    color: #f0ffffde;
+    margin-bottom: 10px;
+}
+
+.campo-de-texto > input::placeholder {
+    color: #f0ffff94;
+}
+
+.btn-login {
+    width: 100%;
+    padding: 16px 0px;
+    margin: 25px;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 3px;
+    color: #2b134b;
+    background-color: #00ff88;
+    cursor: pointer;
+    box-shadow: 0px 10px 40px -12px #0f576d;
+}
+.logo {
+    display: flex;
+    background-color: #4292bf;
+    width: 100%;
+    height: 200px;
+    justify-content: center;
+}
+
+@media only screen and (max-width: 950px){
+    .card-login{
+        width: 85%;
+    }
+}
+@media only screen and (max-width: 600px){
+    .main-login{
+        flex-direction: column;
+    }
+
+    .esquerdo-login > h1 {
+        display: none;
+    }
+
+    .esquerdo-login {
+        width: 100%;
+        height: auto;
+    }
+    .direito-login {
+        width: 100%;
+        height: auto;
+    }
+    .esquerdo-login-image{
+        width: 50%;
+    }
+    .card-login {
+        width: 90%;
+    }
+    .logo{
+        width: 100%;
+        padding-left: 0px;
+    }
+}   
