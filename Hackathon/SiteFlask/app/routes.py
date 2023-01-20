@@ -22,8 +22,8 @@ def error(nome):
 def autenticar():
     usuario = request.form.get('usuario')
     senha = request.form.get('senha')
-    f'Usuario: {usuario} & Senha: {senha}'
-    return login(usuario, senha)
+    #login(usuario, senha)
+    return f'Usuario: {usuario} & Senha: {senha}'
 
 @app.route("/sos")
 @app.route("/sos.html")
@@ -36,6 +36,7 @@ if __name__ == "__main__":
 
 
 def login(usuario, senha):
+    pass
     # Connect to server
     cnx = mysql.connector.connect(
         host="127.0.0.1",
@@ -58,5 +59,5 @@ def login(usuario, senha):
 
     return myresult
 
-result = login('Diego', '123456')
-print(result) 
+#result = login('Diego', '123456')
+#print(result) 
