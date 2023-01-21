@@ -22,8 +22,8 @@ def error(nome):
 def autenticar():
     usuario = request.form.get('usuario')
     senha = request.form.get('senha')
-    f'Usuario: {usuario} & Senha: {senha}'
-    return login(usuario, senha)
+    #f'Usuario: {usuario} & Senha: {senha}'
+    return f'{login(usuario, senha)}'
 
 @app.route("/sos")
 @app.route("/sos.html")
@@ -39,7 +39,7 @@ def login(usuario, senha):
 
     # Connect to server
     cnx = mysql.connector.connect(
-        host="localhost",
+        host="127.0.0.1",
         port=3306,
         user="root",
         password="Jl04081998",
@@ -49,7 +49,7 @@ def login(usuario, senha):
     cur = cnx.cursor()
 
     # Execute a query
-    cur.execute("SELECT * FROM usuario WHERE nome = %s and senha = %s", (usuario, senha))
+    cur.execute("SELECT * FROM login WHERE nome = %s and senha = %s", (usuario, senha))
 
     myresult = cur.fetchone()
 
